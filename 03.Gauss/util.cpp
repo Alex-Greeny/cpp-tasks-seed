@@ -21,10 +21,12 @@ GaussMatrix load_csv_to_matrix(const char *filename)
     }
 
     GaussMatrix mat(static_cast<int>(rcsv.size()), static_cast<int>(rcsv.front().size()));
-    
+
     // Перенос данных
-    for (int i = 0; i < static_cast<int>(rcsv.size()); ++i) {
-        for (int j = 0; j < static_cast<int>(rcsv[i].size()); ++j) {
+    for (int i = 0; i < static_cast<int>(rcsv.size()); ++i)
+    {
+        for (int j = 0; j < static_cast<int>(rcsv[i].size()); ++j)
+        {
             mat(i, j) = rcsv[i][j];
         }
     }
